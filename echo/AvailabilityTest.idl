@@ -1,0 +1,23 @@
+module availability2 
+{
+        struct ResultTO 
+        {
+                string<50> result;
+        };
+ 
+        exception ApplicationException
+        {
+                string<80> text;   
+        };
+
+        typedef sequence<octet,200000> OctetSequence;
+
+        interface AvailabilityTest 
+        {
+                ResultTO echo(in string<100> pValue) raises (ApplicationException);
+
+                OctetSequence testBLOB()
+                raises (ApplicationException);
+
+        };
+};

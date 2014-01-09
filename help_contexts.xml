@@ -1,0 +1,8 @@
+<contexts>
+	<context id="help" title="Ostendo Help">
+		<description>Help for the Ostendo Plugin</description>
+		<topic href="doc/doc.html#install" label="Install"/>
+		<topic href="doc/doc.html#usage" label="Usage"/>
+		<topic href="doc/doc.html#license" label="License"/>
+	</context>
+</contexts>

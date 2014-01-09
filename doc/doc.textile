@@ -1,0 +1,32 @@
+h1(#install). Installation
+
+Copy the plugin jar to eclipse/plugins. 
+Restart Eclipse.
+
+
+h1(#usage). Usage
+
+# add one or more IDL files
+# add one or more log directories
+
+# Select a request message (right arrow icon), and optionally the corresponding reply message
+# If the operation name is unique in the added IDLs, the operation is selected in the IDL tree. If it is not unique the user has to select the operation.
+# Klick Run
+		
+h1(#license). License
+		
+OstendoPlugin is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+OstendoPlugin is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with OstendoPlugin.  If not, see <http://www.gnu.org/licenses/>.
+
+OstendoPlugin includes parts of the JacORB project (http://www.jacorb.org/).
+ 
