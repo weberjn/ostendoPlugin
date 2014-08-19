@@ -444,8 +444,19 @@ public class OstendoView extends ViewPart
 				{
 					plugin.lastIDLDir = new File(filePath).getParent();
 
-					addIDL(filePath);
-					upDateIDLViewer();
+					try
+					{
+						addIDL(filePath);
+						upDateIDLViewer();
+					}
+					catch (Exception e)
+					{
+						e.printStackTrace();
+
+						MessageDialog.openInformation(idlViewer.getControl().getShell(),
+								"Error", e.getMessage());
+						
+					}
 				}
 			}
 		};
