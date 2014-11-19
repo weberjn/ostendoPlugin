@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: OstendoPlugin
 Bundle-SymbolicName: de.jwi.OstendoPlugin;singleton:=true
-Bundle-Version: 1.0.1
+Bundle-Version: 1.0.2
 Bundle-Activator: de.jwi.ostendoplugin.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
@@ -12,11 +12,11 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.help
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-ClassPath: lib/ostendo-1.0.5.jar,
+Bundle-ClassPath: lib/ostendo-1.0.6.jar,
  .,
  lib/idl.jar,
- lib/jacorb.jar,
- lib/jacorb-omgapi.jar,
- lib/slf4j-api-1.6.4.jar,
- lib/slf4j-jdk14-1.6.4.jar
+ lib/jacorb-3.5.jar,
+ lib/jacorb-omgapi-3.5.jar,
+ lib/slf4j-api-1.7.6.jar,
+ lib/slf4j-jdk14-1.7.6.jar
 Bundle-Vendor: jwi.de
