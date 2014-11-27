@@ -76,9 +76,9 @@ public class OstendoCaller
 			System.setOut(stdout);
 		}
 		
-		byte[] data = bos.toByteArray();
+		byte[] data = bos.toByteArray();//getName()
 		
-		OstendoOutputStorage storage = new OstendoOutputStorage(data, requestmessage.getName()+".xml");
+		OstendoOutputStorage storage = new OstendoOutputStorage(data, requestmessage);
 		
 		OstendoOutputInput input = new OstendoOutputInput(storage);
 		

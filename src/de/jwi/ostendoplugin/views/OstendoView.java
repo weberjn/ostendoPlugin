@@ -239,6 +239,7 @@ public class OstendoView extends ViewPart
 			
 //			n="D:\\eclipseworkspace\\OstendoPlugin\\x.xml";
 			
+			
 			n = ".xml";
 			
 			IEditorDescriptor editorDescriptor = IDE
@@ -250,7 +251,7 @@ public class OstendoView extends ViewPart
 
 			IDE.openEditor(page, input, id2);
 		}
-		catch (PartInitException e)
+		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
@@ -769,8 +770,8 @@ public class OstendoView extends ViewPart
 
 	private void idlSelectionChanged(IStructuredSelection selection)
 	{
-		System.out.println("idlSelectionChanged, isLogSelected:"
-				+ isLogSelected);
+//		System.out.println("idlSelectionChanged, isLogSelected:"
+//				+ isLogSelected);
 
 		if (selection.isEmpty())
 		{

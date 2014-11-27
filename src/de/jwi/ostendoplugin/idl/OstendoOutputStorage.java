@@ -5,11 +5,13 @@
 package de.jwi.ostendoplugin.idl;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.InputStream;
 
 import org.eclipse.core.resources.IStorage;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.Path;
 
 /*
  * OstendoPlugin - An Eclipse Pluing for the Ostendo CORBA IIOP Message Analyzer
@@ -39,12 +41,12 @@ import org.eclipse.core.runtime.IPath;
 public class OstendoOutputStorage implements IStorage
 {
 	private byte[] data;
-	String name;
+	File requestmessage;
 
-	public OstendoOutputStorage(byte[] data, String name)
+	public OstendoOutputStorage(byte[] data, File requestmessage)
 	{
 		this.data = data;
-		this.name = name;
+		this.requestmessage = requestmessage;
 	}
 
 	public InputStream getContents() throws CoreException
@@ -54,7 +56,8 @@ public class OstendoOutputStorage implements IStorage
 
 	public IPath getFullPath()
 	{
-		return null;
+		String path = requestmessage.getAbsolutePath();
+		return new Path(path);
 	}
 
 	public Object getAdapter(Class adapter)
@@ -64,7 +67,7 @@ public class OstendoOutputStorage implements IStorage
 
 	public String getName()
 	{
-		return name; 
+		return requestmessage.getName()+".xml"; 
 	}
 
 	public boolean isReadOnly()

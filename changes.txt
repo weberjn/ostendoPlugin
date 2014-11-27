@@ -1,0 +1,15 @@
+
+
+2014-11-27 1.0.3 
+
+Fixed nasty bug:
+
+Path must include project and resource name: /testTiny.sent.log.xml
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.Workspace.newResource(Workspace.java:2137)
+	at org.eclipse.core.internal.resources.Container.getFile(Container.java:208)
+	
+Fix is to return in OstendoOutputStorage.getFullPath()
+an non-null Path.
+
+	
