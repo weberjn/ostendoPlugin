@@ -42,6 +42,8 @@ public class Activator extends AbstractUIPlugin {
 
 	// The shared instance
 	private static Activator plugin;
+	
+	public boolean stateIsRestored = false;
 
 	public List<IDL> idls = new ArrayList<IDL>();
 

@@ -522,8 +522,12 @@ public class OstendoView extends ViewPart
 
 				if (!selection.isEmpty())
 				{
-					IDL idl = (IDL) selection.getFirstElement();
-					removeIDL(idl);
+					Iterator it = selection.iterator();
+					while (it.hasNext())
+					{
+						IDL idl = (IDL) it.next();
+						removeIDL(idl);
+					}
 					upDateIDLViewer();
 				}
 			}
@@ -539,9 +543,12 @@ public class OstendoView extends ViewPart
 
 				if (!selection.isEmpty())
 				{
-					LoggedMessage file = (LoggedMessage) selection
-							.getFirstElement();
-					removeLogdir(file);
+					Iterator it = selection.iterator();
+					while (it.hasNext())
+					{
+						LoggedMessage file = (LoggedMessage) it.next();
+						removeLogdir(file);
+					}
 					upDateLogdirViewer();
 				}
 			}
@@ -695,10 +702,10 @@ public class OstendoView extends ViewPart
 		String s = null;
 		String[] s1 = null;
 
-		if (memento != null)
+		if (memento != null && !plugin.stateIsRestored)
 		{
 			s = memento.getString("IDLS");
-			if (s != null)
+			if (s != null && s.length() > 0)
 			{
 				s1 = s.split("\\n");
 				for (String s2 : s1)
@@ -707,7 +714,7 @@ public class OstendoView extends ViewPart
 				}
 			}
 			s = memento.getString("LOGDIRS");
-			if (s != null)
+			if (s != null && s.length() > 0)
 			{
 				s1 = s.split("\\n");
 				for (String s2 : s1)
@@ -717,6 +724,8 @@ public class OstendoView extends ViewPart
 			}
 			plugin.lastLogDir = memento.getString("LASTLOGDIR");
 			plugin.lastIDLDir = memento.getString("LASTIDLDIR");
+			
+			plugin.stateIsRestored = true;
 		}
 	}
 

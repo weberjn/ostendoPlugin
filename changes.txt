@@ -1,5 +1,8 @@
 
 
+2016-06-14 1.0.5
+Fixed that Logdirs from memento were added each time the view opened.
+
 2016-04-07 1.0.4
 set Window -> Preferences -> Target Platform -> Edit -> Environment -> set Architecture to "x86_64".
 after export works under X64 now.
