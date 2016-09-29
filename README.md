@@ -1,4 +1,4 @@
-OStendo Eclipse Plugin
+Ostendo Eclipse Plugin
 ========================
 
 Convert IIOP Messages to XML using Ostendo.
